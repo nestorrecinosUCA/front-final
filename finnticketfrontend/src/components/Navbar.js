@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet, Link } from 'react-router-dom'
+import iconlogo from '../assets/img/logo.png';
 
 function Navbar() {
     return (
@@ -17,7 +18,7 @@ function Navbar() {
                             <li><a><Link>Opcion 3</Link></a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <img class="w-52 h-auto " src={iconlogo}></img>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
@@ -29,7 +30,7 @@ function Navbar() {
                     <Outlet />
                 </div>
                 <div class="navbar-end">
-                    <a class="btn btn-outline btn-warning"><Link to="/signin">Sign In</Link></a>
+                    <Link to="/signin"><a class="btn btn-warning">Sign In</a></Link>
                 </div>
             </div>
         </>
