@@ -2,7 +2,26 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'regal-blue': '#243c5a',
+        'white-box': '#D9D9D9', 
+        'gold': '#DBB86E',
+        'goldhov': '#DCB259',
+        'card-grey' : '#393E46',
+        'header-bg': '#222831'
+      },
+
+      flexBasis: {
+        '1/7': '14.2857143%',
+        '2/7': '28.5714286%',
+        '3/7': '42.8571429%',
+        '4': '50%',
+        '4/7': '57.1428571%',
+        '5/7': '71.4285714%',
+        '6/7': '85.7142857%',
+      }
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
