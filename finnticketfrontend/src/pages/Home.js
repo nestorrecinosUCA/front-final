@@ -6,6 +6,7 @@ function Home() {
     <>
         {/*Plantilla para Principal page*/ }
         <Navbar />
+        
     </>
   )
 }
