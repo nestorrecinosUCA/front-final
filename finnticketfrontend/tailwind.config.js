@@ -1,4 +1,25 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin")
+
+const Myclass = plugin(function({addUtilities})
+{
+  addUtilities({
+    ".my-rotate-y-180":{
+      transform:"rotateY(180deg)"
+    },
+    ".preserve-3d":{
+      transformStyle:"preserve-3d",
+    }, 
+    ".perspective":{
+      perspective:"1000px",
+    },
+    ".backface-hidden":{
+      backfaceVisibility:"hidden",
+    },
+  })
+})
+
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -9,7 +30,10 @@ module.exports = {
         'gold': '#DBB86E',
         'goldhov': '#DCB259',
         'card-grey' : '#393E46',
-        'header-bg': '#222831'
+        'header-bg': '#222831',
+        'green-available': '#285430',
+        'buton-hov': '#152133',
+        'green-light': '#647E68',
       },
 
       flexBasis: {
@@ -23,7 +47,7 @@ module.exports = {
       }
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), Myclass],
   daisyui: {
     themes: [
       {
