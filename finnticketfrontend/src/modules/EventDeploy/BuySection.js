@@ -3,7 +3,7 @@ import React from 'react'
 function buy() {
     return (
         <>
-            <div className='bg-card-grey my-10 mx-20 rounded-lg p-10 ' >
+            <div className='bg-card-grey my-10 mx-4 sm:mx-20 rounded-lg p-5 sm:p-10 ' >
                 <div className=' bg-header-bg py-5 px-5 rounded-lg items-center text-center'>
                     <h2 class=' text-2xl'>COMPRA</h2>
                 </div>
@@ -26,7 +26,9 @@ function buy() {
                     <button className='bg-green-light rounded-lg p-4 mt-5 font-bold mb-7 hover:bg-green-available px-10'>Realizar pago</button>
                 </div>
             </div>
+
         </>
+
     )
 }
 

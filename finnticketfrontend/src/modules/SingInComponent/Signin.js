@@ -1,6 +1,6 @@
 import React from 'react'
 import iconlogo from '../../assets/img/iconlogo.png'
-import google from '../../assets/img/google-logo-9827.png';
+import google from '../../assets/img/google-logo-9827.png'
 
 function Signin() {
   return (
