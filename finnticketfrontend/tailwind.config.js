@@ -34,6 +34,8 @@ module.exports = {
         'green-available': '#285430',
         'buton-hov': '#152133',
         'green-light': '#647E68',
+        'card-white-grey': '#4D5A69',
+        
       },
 
       flexBasis: {
