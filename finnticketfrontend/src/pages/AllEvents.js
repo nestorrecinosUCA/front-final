@@ -1,10 +1,12 @@
 import React from 'react'
 import EventCard from '../modules/EventContainer/EventCard' 
-
+import ShortCutNavBar from '../components/ShortCutNavBar'
+import EventCardSO from '../modules/EventContainer/EventCardSO'
 function AllEvents() {
   return (
     <>
-      <div className='mx-4 lg:mx-20 text-4xl'>
+      <ShortCutNavBar />
+      <div className='mx-4 lg:mx-20 text-4xl mt-10'>
         <a>Eventos</a>
       </div>
       <div className='mx-4 border-b-2 lg:mx-20 lg:border-b-4 md:border-b-4 2xl:border-b-4 rounded'></div>
@@ -38,6 +40,7 @@ function AllEvents() {
       </div>
       <div className='mx-4 lg:mx-20 border-t'>
         <EventCard/>
+        <EventCardSO/>
       </div>
     </>
   )
