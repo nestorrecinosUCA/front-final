@@ -6,6 +6,7 @@ function Sign() {
   return (
     <>
       {/*Plantilla para signin page*/}
+      
       <div class="flex flex-row">
         <div class="basis-4">
         <div className='flex min-h-full flex-1 flex-col justify-end px-6 pt-6 lg:px-0'>
