@@ -2,6 +2,8 @@ import React from 'react'
 import EventCard from '../modules/EventContainer/EventCard' 
 import ShortCutNavBar from '../components/ShortCutNavBar'
 import EventCardSO from '../modules/EventContainer/EventCardSO'
+import EventCardPanic from '../modules/EventContainer/EventCardPanic'
+
 function AllEvents() {
   return (
     <>
@@ -41,6 +43,7 @@ function AllEvents() {
       <div className='mx-4 lg:mx-20 border-t'>
         <EventCard/>
         <EventCardSO/>
+        <EventCardPanic/>
       </div>
     </>
   )

@@ -1,16 +1,15 @@
 import React from 'react'
-import SOMGEF from '../../assets/img/SOMGEF.png'
-import Information from '../EventDeploy/Information'
+import MGEF from '../../assets/img/MGEF.jpg'
 
-function EventCardSO() {
+function EventCardPanic() {
     return (
         <>
             <div className='bg-card-white-grey rounded mt-2 mb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-6 items-center border-4'>
                 <div className='mb-4 sm:mb-0 sm:mr-2 md:mr-5 px-5 lh:mx-8 lg:mr-5 lg:px-5'>
-                    <img src={SOMGEF} alt="Artist" className="rounded-xl h-auto max-h-60 max-w-full mx-auto sm:h-full sm:w-full lg:h-auto lg:w-auto" />
+                    <img src={MGEF} alt="Artist" className="rounded-xl h-auto max-h-60 max-w-full mx-auto sm:h-full sm:w-full lg:h-auto lg:w-auto" />
                 </div>
                 <div className='mx-8 sm:col-span-2'>
-                    <Information />
+                    <p className='font-bold text-2xl my-8 lg:text-4xl text-center'>EVENTO NO DISPONIBLE </p>
                 </div>
                 <div className='flex-row grid grid-cols-5 justify-items-center lg:justify-items-end h-48 mt-8 lg:grid-cols-1'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -38,4 +37,4 @@ function EventCardSO() {
     )
 }
 
-export default EventCardSO
+export default EventCardPanic
