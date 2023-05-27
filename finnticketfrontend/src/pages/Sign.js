@@ -1,10 +1,12 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Signin from '../modules/SingInComponent/Signin'
+import OJSS from '../assets/img/OJSS.png'
 
 function Sign() {
   return (
     <>
       {/*Plantilla para signin page*/}
+      
       
       <div class="flex flex-row">
         <div class="basis-4">
