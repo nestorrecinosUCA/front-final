@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import ShowInfo from './pages/ShowInfo';
 import AllEvents from './pages/AllEvents';
 import PersonalHistory from './pages/PersonalHistory';
+import Mod from './pages/Mod';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='allEvents' element={<AllEvents/>}/>
         <Route path='allEvents' element={<AllEvents/>}/>
         <Route path='personalHistory' element={<PersonalHistory/>}/>
+        <Route path='mod' element={<Mod/>}/>
       </Routes>
     </>
   );
