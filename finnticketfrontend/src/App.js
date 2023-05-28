@@ -5,6 +5,7 @@ import Sign from "./pages/Sign";
 import Home from './pages/Home';
 import ShowInfo from './pages/ShowInfo';
 import AllEvents from './pages/AllEvents';
+import PersonalHistory from './pages/PersonalHistory';
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
         <Route path="signin" element={<Sign />}/>
         <Route path='event' element={<ShowInfo/>}/>
         <Route path='allEvents' element={<AllEvents/>}/>
+        <Route path='allEvents' element={<AllEvents/>}/>
+        <Route path='personalHistory' element={<PersonalHistory/>}/>
       </Routes>
     </>
   );
