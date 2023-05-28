@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import ShowInfo from './pages/ShowInfo';
 import AllEvents from './pages/AllEvents';
 import PersonalHistory from './pages/PersonalHistory';
-
+import Collaborators from './pages/Collaborators';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route path='allEvents' element={<AllEvents/>}/>
         <Route path='allEvents' element={<AllEvents/>}/>
         <Route path='personalHistory' element={<PersonalHistory/>}/>
+        <Route path='collaborators' element={<Collaborators/>}/>
       </Routes>
     </>
   );
