@@ -31,7 +31,7 @@ function Mod() {
                     </div>
                     <input
                         type="text"
-                        class="pl-10 pr-4 py-2 rounded-full w-full sm:w-96 border-gray-300 text-gray-800 focus:border-blue-500 focus:ring-blue-500 focus:outline-none"
+                        class="pl-10 pr-4 py-2 rounded-full w-60 sm:w-96 border-gray-300 text-gray-800  focus:outline-none"
                         placeholder="Buscar un usuario"
                     />
                 </div>
