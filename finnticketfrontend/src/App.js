@@ -10,6 +10,7 @@ import Mod from './pages/Mod';
 import Permits from './pages/Permits';
 import Collaborators from './pages/Collaborators';
 import AdminEventsHistory from './pages/AdminEventsHistory';
+import Analysis from './pages/Analysis';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='permits' element={<Permits/>}/>
         <Route path='collaborators' element={<Collaborators/>}/>
         <Route path='eventsHistory' element={<AdminEventsHistory/>}/>
+        <Route path='analysis' element={<Analysis/>}/>
       </Routes>
     </>
   );
