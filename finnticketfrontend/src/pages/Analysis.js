@@ -30,12 +30,12 @@ function Analysis() {
                 </div>
                 <div className='grid  sm:grid-cols-2 sm:grid-rows-1 lg:grid-cols-4 lg:grid-rows-3 gap-4'>
                     <div className='flex border-4 rounded w-full text-center col-span-2'>
-                        <p className='bg-black px-4 py-2'>Tickets vendidos</p>
-                        <p className='px-4 py-4'>20</p>
+                        <p className='bg-black px-4 py-2 w-full'>Tickets vendidos</p>
+                        <p className='px-4 py-4 w-full'>20</p>
                     </div>
                     <div className='flex border-4 rounded w-full text-center col-span-2'>
-                        <p className='bg-black px-4 py-2'>Asistencia</p>
-                        <p className='px-4 py-4'>20</p>
+                        <p className='bg-black px-4 py-2 w-full'>Asistencia</p>
+                        <p className='px-4 py-4 w-full'>20</p>
                     </div>
                     <div className='flex border-4 rounded text-center row-span-2 col-span-2 '>
                         <p className='bg-black px-4 py-2 justify-center h-full '>Localidades Populares</p>
@@ -46,12 +46,12 @@ function Analysis() {
                         </div>
                     </div>
                     <div className='flex border-4 rounded w-full text-center col-span-2'>
-                        <p className='bg-black px-4 py-2'>% Personas en grupo</p>
-                        <p className='px-4 py-4'>20</p>
+                        <p className='bg-black px-4 py-2 w-full'>% Personas en grupo</p>
+                        <p className='px-4 py-4 w-full'>20</p>
                     </div>
                     <div className='flex border-4 rounded w-full text-center col-span-2'>
-                        <p className='bg-black px-4 py-2'>% Personas solas</p>
-                        <p className='px-4 py-4'>20</p>
+                        <p className='bg-black px-4 py-2 w-full'>% Personas solas</p>
+                        <p className='px-4 py-4 w-full'>20</p>
                     </div>
                 </div>
                 <div className='px-20 text-center lg:px-80 mb-8 mt-14'>
