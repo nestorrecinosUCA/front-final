@@ -1,13 +1,14 @@
 import React from 'react'
 import EventCard from '../modules/EventContainer/EventCard' 
-import ShortCutNavBar from '../components/ShortCutNavBar'
 import EventCardSO from '../modules/EventContainer/EventCardSO'
 import EventCardPanic from '../modules/EventContainer/EventCardPanic'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 function AllEvents() {
   return (
     <>
-      <ShortCutNavBar />
+      <Navbar />
       <div className='mx-4 lg:mx-20 text-4xl mt-10'>
         <a>Eventos</a>
       </div>

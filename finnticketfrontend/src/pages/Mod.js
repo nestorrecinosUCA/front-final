@@ -1,11 +1,11 @@
 import React from 'react'
-import ShortCutNavBar from '../components/ShortCutNavBar'
 import ModTable from '../modules/Mod/ModTable'
+import Navbar from '../components/Navbar'
 
 function Mod() {
     return (
         <>
-            <ShortCutNavBar />
+            <Navbar />
             <div className='mx-4 lg:mx-20 text-4xl mt-10 mb-4'>
                 <a>Moderador | Bloqueo de usuarios </a>
             </div>
