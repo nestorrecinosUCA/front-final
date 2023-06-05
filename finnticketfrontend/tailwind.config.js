@@ -35,6 +35,7 @@ module.exports = {
         'buton-hov': '#152133',
         'green-light': '#647E68',
         'card-white-grey': '#4D5A69',
+        'cream-pie': '#E4DCCF',
       },
 
       flexBasis: {
