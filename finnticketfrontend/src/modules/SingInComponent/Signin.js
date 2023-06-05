@@ -1,6 +1,7 @@
 import React from 'react'
 import iconlogo from '../../assets/img/iconlogo.png'
 import google from '../../assets/img/google-logo-9827.png'
+import { Outlet, Link } from 'react-router-dom'
 
 function Signin() {
   return (
@@ -55,12 +56,14 @@ function Signin() {
             </div>
 
             <div>
+              <Link to="/homeWNavbar">
               <button
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-gold px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-goldhov focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Iniciar sesion
               </button>
+              </Link>
             </div>
             <div>
               <button
@@ -77,6 +80,7 @@ function Signin() {
           </form>
         </div>
       </div>
+      <Outlet/>
     </>
   )
 }

@@ -11,6 +11,7 @@ import Permits from './pages/Permits';
 import Collaborators from './pages/Collaborators';
 import AdminEventsHistory from './pages/AdminEventsHistory';
 import PurchasedTicket from './pages/PurchasedTicket';
+import HomeWNavbar from './pages/HomeWNavbar';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='collaborators' element={<Collaborators/>}/>
         <Route path='eventsHistory' element={<AdminEventsHistory/>}/>
         <Route path='purchasedTicket' element={<PurchasedTicket/>}/>
+        <Route path='homeWNavbar' element={<HomeWNavbar/>}/>
       </Routes>
     </>
   );
