@@ -3,6 +3,7 @@ import EventCard from '../modules/EventContainer/EventCard'
 import EventCardSO from '../modules/EventContainer/EventCardSO'
 import EventCardPanic from '../modules/EventContainer/EventCardPanic'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 function AllEvents() {
   return (

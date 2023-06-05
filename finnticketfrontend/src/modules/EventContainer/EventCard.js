@@ -38,6 +38,7 @@ function EventCard() {
           </Link>
 
         </div>
+        <Outlet />
       </div>
     </>
   )

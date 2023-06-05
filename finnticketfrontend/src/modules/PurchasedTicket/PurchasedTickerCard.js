@@ -18,7 +18,7 @@ function PurchasedTickerCard() {
                 </div>
                 <div className='p-5 w-full h-auto text-center justify-center'>
                     <div className='flex flex-col sm:flex-row md:flex-col lg:flex-row 2xl:flex-row items-center py-8'>
-                        <a className='bg-button-orange w-60 font-bold rounded-md p-2 px-10'>Generar Ticket</a>
+                        <button className='bg-button-orange w-60 font-bold rounded-md p-2 px-10'>Transferir Ticket</button>
                         <a className='bg-button-green w-60 font-bold rounded-md p-2 px-10 ml-0 lg:ml-2  mt-2 lg:mt-0'>Total: $300</a>
                     </div>
                 </div>

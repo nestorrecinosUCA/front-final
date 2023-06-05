@@ -37,6 +37,7 @@ function EventCardPanic() {
                     </Link>
 
                 </div>
+                <Outlet />
             </div>
         </>
     )

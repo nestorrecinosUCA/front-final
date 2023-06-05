@@ -18,7 +18,7 @@ function Navbar() {
                                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                                 </a>
                                 <ul class="p-2">
-                                    <li class="bg-base-200"><a>Eventos</a></li>
+                                    <li class="bg-base-200"><Link to="/allEvents"><a>Eventos</a></Link></li>
                                     <li class="bg-base-200"><Link to="/purchasedTicket"><a>Tickets Comprados</a></Link></li>
                                     <li class="bg-base-200"><Link to="/personalHistory"><a>Historial Eventos</a></Link></li>
                                 </ul>
@@ -26,7 +26,15 @@ function Navbar() {
 
                             <li><a><Link to="">Usuarios</Link></a></li>
                             <li><a><Link to="">Moderadores</Link></a></li>
-                            <li><a><Link to="">Administracion</Link></a></li>
+
+                            <li>
+                                <a>Administracion
+                                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+                                </a>
+                                <ul class="p-2">
+                                    <li class="bg-base-200"><Link to="/permits"><a>Permisos</a></Link></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <img class="w-52 h-auto " src={iconlogo}></img>
