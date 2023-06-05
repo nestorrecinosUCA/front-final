@@ -12,7 +12,7 @@ function Navbar() {
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52 font-sans font-bold">
-                            <li ><Link to="/"><a>Inicio</a></Link></li>
+                            <li ><Link to="/homeWNavbar"><a>Inicio</a></Link></li>
                             <li>
                                 <a>Eventos
                                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
@@ -44,7 +44,7 @@ function Navbar() {
                 {/*MENU FULL SCREEN*/}
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 font-sans font-bold">
-                        <li ><Link to="/"><a>Inicio</a></Link></li>
+                        <li ><Link to="/homeWNavbar"><a>Inicio</a></Link></li>
                         <li>
                             <a>Eventos
                                 <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
@@ -70,8 +70,10 @@ function Navbar() {
                     </ul>
                     <Outlet />
                 </div>
-                <div class="navbar-end">
-                    <Link to="/signin"><a class="btn btn-warning rounded-lg">Sign In</a></Link>
+                <div class="navbar-end ">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                        <img class="w-6 h-6 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Imagen de persona logueada" />
+                    </div>
                 </div>
             </div>
         </>
