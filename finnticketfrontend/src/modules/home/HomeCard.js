@@ -3,7 +3,7 @@ import React from 'react'
 function HomeCard() {
     return (
         <>
-            <div class="flex items-center justify-center mb-10">
+            <div class="flex items-center justify-center mb-6 z-10">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10">
 
                     <div class="card shadow-lg rounded-lg overflow-hidden bg-base-100 hover:bg-base-200 transition duration-300 ease-in-out">
