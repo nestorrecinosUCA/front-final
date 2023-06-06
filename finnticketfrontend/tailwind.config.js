@@ -37,6 +37,7 @@ module.exports = {
         'card-white-grey': '#4D5A69',
         'button-orange': '#D88837',
         'button-green': '#2EAB9E',
+        'base-yellow': '#D4AF37'
       },
 
       flexBasis: {
@@ -77,9 +78,9 @@ module.exports = {
            'base-content' : '#EEEEEE',
 
            'info' : '#EEEEEE',
-           'success' : '#009485',
+           'success' : '#45934C',
            'warning' : '#FFD369',
-           'error' : '#ff5724',
+           'error' : '#C03E3E',
 
           '--rounded-box': '1rem',          
           '--rounded-btn': '.5rem',        
