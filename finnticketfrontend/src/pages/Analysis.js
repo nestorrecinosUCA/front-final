@@ -60,13 +60,14 @@ function Analysis() {
                     </div>
                     <div className='border-b-4' />
 
+                    
+                    
+                </div>
+                <div className='w-full text-end'>
+                    <button className='w-40 bg-gold border-2 rounded h-12 text-lg font-semibold'>Exportar pdf</button>
+                </div>
 
-            </div>
-            <div className='w-full text-end'>
-                <button className='w-40 bg-gold border-2 rounded h-12 text-lg font-semibold'>Exportar pdf</button>
-            </div>
-
-        </div >
+            </div >
         </>
     )
 }
