@@ -3,6 +3,7 @@ import ShortCutNavBar from '../components/ShortCutNavBar'
 import MGEF from '../assets/img/MGEF.jpg'
 import Information from '../modules/EventDeploy/Information'
 
+
 function Analysis() {
     return (
         <>
@@ -60,8 +61,11 @@ function Analysis() {
                     </div>
                     <div className='border-b-4' />
 
-                    
-                    
+                    <figure>
+                        <h2>Gráfica</h2>
+                        <canvas id="eventChart" width="400" height="400" className='bg-gray-800'></canvas>
+                    </figure>
+
                 </div>
                 <div className='w-full text-end'>
                     <button className='w-40 bg-gold border-2 rounded h-12 text-lg font-semibold'>Exportar pdf</button>
