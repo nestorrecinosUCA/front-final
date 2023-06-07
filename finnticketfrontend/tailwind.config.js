@@ -35,7 +35,13 @@ module.exports = {
         'buton-hov': '#152133',
         'green-light': '#647E68',
         'card-white-grey': '#4D5A69',
+<<<<<<< HEAD
         'cream-pie': '#E4DCCF',
+=======
+        'button-orange': '#D88837',
+        'button-green': '#2EAB9E',
+        'base-yellow': '#D4AF37'
+>>>>>>> 69e1106222c3d80fd00aa0119fa18f0191acdbbb
       },
 
       flexBasis: {
@@ -78,9 +84,9 @@ module.exports = {
            'base-content' : '#EEEEEE',
 
            'info' : '#EEEEEE',
-           'success' : '#009485',
+           'success' : '#45934C',
            'warning' : '#FFD369',
-           'error' : '#ff5724',
+           'error' : '#C03E3E',
 
           '--rounded-box': '1rem',          
           '--rounded-btn': '.5rem',        

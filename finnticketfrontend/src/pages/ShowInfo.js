@@ -2,12 +2,12 @@ import React from 'react'
 import EventInfo from '../modules/EventDeploy/EventInfo'
 import Places from '../modules/EventDeploy/PlacesPanel'
 import BuySection from '../modules/EventDeploy/BuySection'
-import ShortCutNavBar from '../components/ShortCutNavBar'
+import Navbar from '../components/Navbar'
 
 function ShowInfo() {
   return (
     <>
-      <ShortCutNavBar />
+      <Navbar />
       <div class="flex flex-col lg:flex-row h-full">
         <div class="w-full lg:basis-4"><EventInfo /></div>
         <div class="w-full lg:basis-4">

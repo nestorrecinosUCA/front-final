@@ -1,18 +1,19 @@
 import React from 'react'
-import ShortCutNavBar from '../components/ShortCutNavBar'
 import PermitsTable from '../modules/PermitsPage/PermitsTable'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 function Permits() {
     return (
         <>
-            <ShortCutNavBar />
-            <div className='mx-4 lg:mx-20 text-4xl mt-10 mb-4'>
+            <Navbar />
+            <div className='mx-4 lg:mx-20 text-4xl mt-10 mb-4 '>
                 <a>Permisos de usuarios</a>
             </div>
             <div className='mx-4 border-b-2 lg:mx-20 lg:border-b-4 md:border-b-4 2xl:border-b-4 rounded' />
             <div className="mx-4 lg:mx-20 flex justify-end mt-2">
                 <div class="relative w-60 sm:w-auto">
-                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
                         <svg
                             aria-hidden="true"
                             class="w-5 h-5 text-gray-500 dark:text-gray-400"

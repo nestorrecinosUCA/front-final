@@ -11,6 +11,8 @@ import Permits from './pages/Permits';
 import Collaborators from './pages/Collaborators';
 import AdminEventsHistory from './pages/AdminEventsHistory';
 import ModalTest from './pages/ModalTest';
+import PurchasedTicket from './pages/PurchasedTicket';
+import HomeWNavbar from './pages/HomeWNavbar';
 
 function App() {
   return (
@@ -21,11 +23,13 @@ function App() {
         <Route path='event' element={<ShowInfo/>}/>
         <Route path='allEvents' element={<AllEvents/>}/>
         <Route path='personalHistory' element={<PersonalHistory/>}/>
-        <Route path='mod' element={<Mod/>}/>
+        <Route path='moderator' element={<Mod/>}/>
         <Route path='permits' element={<Permits/>}/>
         <Route path='collaborators' element={<Collaborators/>}/>
         <Route path='eventsHistory' element={<AdminEventsHistory/>}/>
         <Route path='payment' element={<ModalTest/>}/>
+        <Route path='purchasedTicket' element={<PurchasedTicket/>}/>
+        <Route path='homeWNavbar' element={<HomeWNavbar/>}/>
       </Routes>
     </>
   );

@@ -40,7 +40,7 @@ function Carousel() {
 
     return (
         <>
-            <div class=" flex items-center p-12">
+            <div class=" flex items-center z-10">
 
                 <div className='w-full h-96 lg:w-3/4 lg:h-96 lg:py-16 m-auto py-20 px-4 relative group'>
                     <div

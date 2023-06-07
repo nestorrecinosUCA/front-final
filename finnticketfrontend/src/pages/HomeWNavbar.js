@@ -1,21 +1,21 @@
 import React from 'react'
 import Footer from '../components/Footer'
 import Carousel from '../modules/home/Carousel'
-import HomeCard from '../modules/home/HomeCard'
-import NavbarHome from '../components/NavbarHome'
+import HomeCard2 from '../modules/home/HomeCard2'
+import Navbar from '../components/Navbar'
 
 
-function Home() {
+function HomeWNavbar() {
   return (
     <>
       {/*Plantilla para Principal page*/}
       
-      <NavbarHome />
+      <Navbar />
       <Carousel />
-      <HomeCard />
+      <HomeCard2 />
       <Footer />
     </>
   )
 }
 
-export default Home
+export default HomeWNavbar
