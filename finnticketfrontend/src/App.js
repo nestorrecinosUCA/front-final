@@ -10,6 +10,7 @@ import Mod from './pages/Mod';
 import Permits from './pages/Permits';
 import Collaborators from './pages/Collaborators';
 import AdminEventsHistory from './pages/AdminEventsHistory';
+import ModalTest from './pages/ModalTest';
 import PurchasedTicket from './pages/PurchasedTicket';
 import HomeWNavbar from './pages/HomeWNavbar';
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='permits' element={<Permits/>}/>
         <Route path='collaborators' element={<Collaborators/>}/>
         <Route path='eventsHistory' element={<AdminEventsHistory/>}/>
+        <Route path='payment' element={<ModalTest/>}/>
         <Route path='purchasedTicket' element={<PurchasedTicket/>}/>
         <Route path='homeWNavbar' element={<HomeWNavbar/>}/>
       </Routes>
