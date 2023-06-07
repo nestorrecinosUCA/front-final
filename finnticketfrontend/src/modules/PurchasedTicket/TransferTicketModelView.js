@@ -1,4 +1,5 @@
 import React from "react";
+import ROAR from '../../assets/img/ROAR.png'
 
 function TransferTicketModelView() {
   const [showModal, setShowModal] = React.useState(false);
@@ -11,51 +12,83 @@ function TransferTicketModelView() {
       >
         Transferir Ticket
       </button>
-      
+
       {showModal ? (
         <>
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none p-4"
           >
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
-              {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-base-100 outline-none focus:outline-none">
-                {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-3xl font-semibold">
-                    Transferencia
-                  </h3>
-                  <button
-                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
-                  >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                      ×
-                    </span>
-                  </button>
+            <div className="relative w-full">
+              <div class="lg:hidden">
+                <div class="flex justify-center items-center min-h-screen">
+                  <div class="h-auto w-80 bg-card-grey border-2 border-gold p-3 rounded-lg">
+                    <p class="text-xl font-semibold">Detalles de transferencia</p>
+                    <div class="input_text mt-6 relative">
+                      <select className="select select-bordered w-full max-w-xs">
+                        <option disabled selected>Localidad</option>
+                        <option>Little Big Boy</option>
+                        <option>Astronomic</option>
+                      </select>
+                    </div>
+                    <div className='flex flex-row justify-center my-4'>
+                      <p className='bg-header-bg rounded-lg px-4 mx-2 lg:mx-4 py-3'>Cantidad:</p>
+                      <button class="btn btn-circle bg-header-bg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                      </button>
+                      <p className='bg-header-bg mx-4 rounded-lg px-5 lg:px-8 py-3'>0</p>
+                      <button class="btn btn-circle bg-header-bg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                      </button>
+                    </div>
+                    <div class="mb-6">
+                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white ml-2">Destinatario</label>
+                      <input type="email" id="email" class="h-12 pl-7 outline-none px-2  w-full bg-header-bg rounded-xl mt-2" placeholder="john.doe@company.com" required />
+                    </div>
+                    <div class="flex justify-center mt-4"> 
+                    <button class="mr-2 outline-none pay h-12 bg-gold text-white mb-3 hover:bg-goldhov rounded-lg w-56 cursor-pointer transition-all">Enviar</button> 
+                    <button onClick={() => setShowModal(false)} class="outline-none pay h-12 bg-red-500 text-white mb-3 hover:bg-red-600 rounded-lg w-56 cursor-pointer transition-all">Cancelar</button>
+                    </div>
+                  </div>
                 </div>
-                {/*body*/}
-                <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    /Por hacer/
-                  </p>
-                </div>
-                {/*footer*/}
-                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                  <button
-                    className="btn btn-error text-white background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Close
-                  </button>
-                  <button
-                    className="btn btn-success text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Save Changes
-                  </button>
+              </div>
+
+              <div class="hidden lg:block">
+                <div className='flex justify-center items-center min-h-screen'>
+                  <div className='bg-card-grey mx-auto w-8/12 lg:mx-60 lg:my-36 rounded-sm border-2 border-gold flex flex-row justify-center mid-h-screen items-center'>
+                    <div className='basis-5 w-full sm:w-auto'>
+                      <div class="h-auto w-full p-3 rounded-lg">
+                        <p class="text-xl font-semibold">Detalles de transferencia</p>
+                        <div class="input_text mt-6 relative">
+                          <select className="select select-bordered w-full max-w-xs">
+                            <option disabled selected>Localidad</option>
+                            <option>Little Big Boy</option>
+                            <option>Astronomic</option>
+                          </select>
+                        </div>
+                        <div className='flex flex-row justify-center my-4'>
+                          <p className='bg-header-bg rounded-lg px-4 mx-4 py-3'>Cantidad:</p>
+                          <button class="btn btn-circle bg-header-bg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                          </button>
+                          <p className='bg-header-bg mx-4 rounded-lg px-8 py-3'>0</p>
+                          <button class="btn btn-circle bg-header-bg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                          </button>
+                        </div>
+                        <div class="mb-6">
+                          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Destinatario</label>
+                          <input type="email" id="email" class="h-12 pl-7 outline-none px-2  w-full bg-header-bg rounded-xl mt-2" placeholder="john.doe@company.com" required />
+                        </div>
+                        <div class="flex justify-center mt-4">
+                          <button class="mr-2 outline-none pay h-12 bg-gold text-white mb-3 hover:bg-goldhov rounded-lg w-56 cursor-pointer transition-all">Enviar</button> 
+                          <button onClick={() => setShowModal(false)} class="outline-none pay h-12 bg-red-500 text-white mb-3 hover:bg-red-600 rounded-lg w-56 cursor-pointer transition-all">Cancelar</button>
+                          </div>
+                      </div>
+                    </div>
+                    <div className='basis-1 h-full w-full border-l-4'>
+                      <img src={ROAR} alt="Artist" className="rounded-xl mx-auto h-full w-full" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
