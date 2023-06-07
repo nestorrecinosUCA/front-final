@@ -13,6 +13,7 @@ import AdminEventsHistory from './pages/AdminEventsHistory';
 import ModalTest from './pages/ModalTest';
 import PurchasedTicket from './pages/PurchasedTicket';
 import HomeWNavbar from './pages/HomeWNavbar';
+import CreateEvent from './pages/CreateEvent';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path='payment' element={<ModalTest/>}/>
         <Route path='purchasedTicket' element={<PurchasedTicket/>}/>
         <Route path='homeWNavbar' element={<HomeWNavbar/>}/>
+        <Route path='createEvent' element={<CreateEvent />}/>
       </Routes>
     </>
   );

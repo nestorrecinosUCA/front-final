@@ -1,6 +1,6 @@
 import React from "react";
 
- function TransferTicketModelView() {
+function TransferTicketModelView() {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>
@@ -11,6 +11,7 @@ import React from "react";
       >
         Transferir Ticket
       </button>
+      
       {showModal ? (
         <>
           <div
