@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const PInfoCard = () => {
+function PInfoCard() {
 
     const [isHovered, setIsHovered] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
