@@ -2,10 +2,37 @@ import React from 'react'
 import iconlogo from '../../assets/img/iconlogo.png'
 import google from '../../assets/img/google-logo-9827.png'
 import { Outlet, Link } from 'react-router-dom'
+import { gapi } from 'gapi-script'
+import GoogleLogin from 'react-google-login'
+import { useEffect } from 'react'
 
 function Signin() {
+
+  const clientID = "199267379325-pvol6fa9781qc2vos0iscna8l1kai1bn.apps.googleusercontent.com";
+
+  useEffect(() => {
+    const start = () => {
+      gapi.auth2.init({
+        clientId: clientID,
+      })
+
+    }
+    gapi.load("client:auth2", start)
+  }, [])
+
+  const onSucces = (res) => {
+    console.log("Login exitoso")
+    console.log(res)
+  }
+
+  const onFailure = (res) => {
+    console.log("Login fallido")
+    console.log(res)
+  }
+
   return (
     <>
+
 
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -41,7 +68,7 @@ function Signin() {
                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-white">
                   Contraseña
                 </label>
-                
+
               </div>
               <div className="mt-2">
                 <input
@@ -57,16 +84,16 @@ function Signin() {
 
             <div>
               <Link to="/homeWNavbar">
-              <button
-                type="submit"
-                className="flex w-full justify-center rounded-md bg-gold px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-goldhov focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                Iniciar sesion
-              </button>
+                <button
+                  type="submit"
+                  className="flex w-full justify-center rounded-md bg-gold px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-goldhov focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  Iniciar sesion
+                </button>
               </Link>
             </div>
             <div>
-              <button
+              {/*<button
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-gold px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-goldhov focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                 <img
@@ -75,12 +102,17 @@ function Signin() {
                   alt="Google Logo"
                 />
                 <a>Inicia Sesion con google</a>
-              </button>
+                </button>*/}
+              <GoogleLogin clientId={clientID}
+                onSuccess={onSucces}
+                onFailure={onFailure}
+                cookiePolicy={"single_host_policy"}
+                className='w-full justify-center' />
             </div>
           </form>
         </div>
       </div>
-      <Outlet/>
+      <Outlet />
     </>
   )
 }
