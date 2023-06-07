@@ -61,10 +61,48 @@ function Analysis() {
                     </div>
                     <div className='border-b-4' />
 
-                    <figure>
-                        <h2>Gráfica</h2>
+                    {/* <figure>
                         <canvas id="eventChart" width="400" height="400" className='bg-gray-800'></canvas>
-                    </figure>
+                    </figure>*/}
+
+                    {/*DISEÑO DE EJEMPLO
+                        LUEGO LO CAMBIAREMOS CON EL USO DE LA API CON LA LIBRERIA DE CHART.JS */}
+                    <div class="container mx-auto p-8">
+                       
+                        <div class="border border-gray-300 rounded-lg overflow-hidden">
+                            <svg class="w-full h-auto sm:h-96" viewBox="0 0 1000 1000">
+                                <line x1="100" y1="950" x2="950" y2="950" stroke="black" stroke-dasharray="5" />
+                                <line x1="100" y1="100" x2="100" y2="950" stroke="black" stroke-dasharray="5" />
+
+                                <g class="text-2xl text-gray-500">
+                                    <text x="100" y="970" text-anchor="middle">1</text>
+                                    <text x="250" y="970" text-anchor="middle">2</text>
+                                    <text x="400" y="970" text-anchor="middle">3</text>
+                                    <text x="550" y="970" text-anchor="middle">4</text>
+                                    <text x="700" y="970" text-anchor="middle">5</text>
+                                    <text x="850" y="970" text-anchor="middle">6</text>
+                                    <text x="1000" y="970" text-anchor="middle">7</text>
+                                </g>
+
+                                <g class="text-2xl text-gray-500">
+                                    <text x="80" y="950" text-anchor="end">0</text>
+                                    <text x="80" y="850" text-anchor="end">100</text>
+                                    <text x="80" y="750" text-anchor="end">200</text>
+                                    <text x="80" y="650" text-anchor="end">300</text>
+                                    <text x="80" y="550" text-anchor="end">400</text>
+                                    <text x="80" y="450" text-anchor="end">500</text>
+                                    <text x="80" y="350" text-anchor="end">600</text>
+                                    <text x="80" y="250" text-anchor="end">700</text>
+                                    <text x="80" y="150" text-anchor="end">800</text>
+                                    <text x="80" y="50" text-anchor="end">900</text>
+                                </g>
+
+                                <polyline points="100,900 250,800 400,600 550,400 700,200 850,100 1000,0" fill="none" stroke="goldenrod" stroke-width="2" />
+                            </svg>
+                        </div>
+                    </div>
+
+
 
                 </div>
                 <div className='w-full text-end'>
