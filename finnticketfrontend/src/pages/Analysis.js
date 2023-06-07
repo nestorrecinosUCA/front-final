@@ -30,7 +30,7 @@ function Analysis() {
                 </div>
                 <div className='grid  sm:grid-cols-2 sm:grid-rows-1 lg:grid-cols-4 lg:grid-rows-3 gap-4'>
                     <div className='flex border-4 rounded w-full text-center col-span-2'>
-                        <p className='bg-black px-4 py-2'>Tickets vendidos</p>
+                        <p className='bg-black w-full px-4 py-2'>Tickets vendidos</p>
                         <p className='px-4 py-4 w-full'>20</p>
                     </div>
                     <div className='flex border-4 rounded w-full text-center col-span-2'>
@@ -38,8 +38,8 @@ function Analysis() {
                         <p className='px-4 py-4 w-full'>20</p>
                     </div>
                     <div className='flex border-4 rounded text-center row-span-2 col-span-2 '>
-                        <p className='bg-black px-4 py-2 justify-center h-full '>Localidades Populares</p>
-                        <div className='text-start'>
+                        <p className='bg-black px-4 py-2 justify-center h-full w-full '>Localidades Populares</p>
+                        <div className='text-start w-full'>
                             <p className='px-4 py-4'>1.Astronomic</p>
                             <p className='px-4 py-4'>2.Platino</p>
                             <p className='px-4 py-4'>3.Juan</p>
@@ -59,13 +59,14 @@ function Analysis() {
                         <a>Gráfica</a>
                     </div>
                     <div className='border-b-4' />
-                    
-                </div>
-                <div className='w-full text-end'>
-                    <button className='w-40 bg-gold border-2 rounded h-12 text-lg font-semibold'>Exportar pdf</button>
-                </div>
-                
+
+
             </div>
+            <div className='w-full text-end'>
+                <button className='w-40 bg-gold border-2 rounded h-12 text-lg font-semibold'>Exportar pdf</button>
+            </div>
+
+        </div >
         </>
     )
 }

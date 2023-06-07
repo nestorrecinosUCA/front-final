@@ -1,14 +1,14 @@
 import React from 'react'
 import { Outlet, Link } from 'react-router-dom'
 
-function HomeCard() {
+function HomeCard2() {
     return (
         <>
             <div class="flex items-center justify-center mb-6 z-10 p-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10">
 
                     <div class="card shadow-lg rounded-lg overflow-hidden bg-base-100 hover:bg-base-200 transition duration-300 ease-in-out">
-                        <Link to="/signin">
+                        <Link to="/event">
                         <img class="w-72 h-48 object-cover transform hover:scale-95 hover:opacity-75 transition duration-500 ease-in-out rounded-t-lg" src="https://www.fayerwayer.com/resizer/njbORCHBGgwIlAgfIaKwvC1zZ1g=/arc-photo-metroworldnews/arc2-prod/public/HYMYK7RLHVFKBF6TFELTTM5QPY.webp" alt="spiterman" />
                         <div class="p-4">
                             <h2 class="text-sm mb-2">EVENTO PELICULA - 12/06/2023</h2>
@@ -74,4 +74,4 @@ function HomeCard() {
     )
 }
 
-export default HomeCard
+export default HomeCard2

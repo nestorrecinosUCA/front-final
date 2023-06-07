@@ -1,13 +1,13 @@
 import React from 'react'
-import ShortCutNavBar from '../components/ShortCutNavBar'
 import MGEF from '../assets/img/MGEF.jpg'
 import Information from '../modules/EventDeploy/Information'
 import CollabTable from '../modules/Collaborators/CollabTable'
+import Navbar from '../components/Navbar'
 
 function Collaborators() {
     return (
         <>
-            <ShortCutNavBar />
+            <Navbar />
             <div className='mx-4 lg:mx-20 text-4xl mt-10 mb-4'>
                 <a>Collaboradores del evento </a>
             </div>

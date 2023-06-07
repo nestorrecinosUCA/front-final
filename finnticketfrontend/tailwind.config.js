@@ -35,15 +35,21 @@ module.exports = {
         'buton-hov': '#152133',
         'green-light': '#647E68',
         'card-white-grey': '#4D5A69',
+        'cream-pie': '#E4DCCF',
+        'button-orange': '#D88837',
+        'button-green': '#2EAB9E',
+        'base-yellow': '#D4AF37'
       },
 
       flexBasis: {
         '1/7': '14.2857143%',
+        '1': '25%',
         '2/7': '28.5714286%',
         '3/7': '42.8571429%',
         '4': '50%',
         '4/7': '57.1428571%',
         '5/7': '71.4285714%',
+        '5': '75%',
         '6/7': '85.7142857%',
       }
     },
@@ -75,9 +81,9 @@ module.exports = {
            'base-content' : '#EEEEEE',
 
            'info' : '#EEEEEE',
-           'success' : '#009485',
+           'success' : '#45934C',
            'warning' : '#FFD369',
-           'error' : '#ff5724',
+           'error' : '#C03E3E',
 
           '--rounded-box': '1rem',          
           '--rounded-btn': '.5rem',        
