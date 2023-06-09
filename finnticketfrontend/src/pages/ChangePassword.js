@@ -4,10 +4,10 @@ import iconlogo from '../assets/img/iconlogo.png'
 function ChangePassword() {
     return (
         <>
-
-            <div className='flex justify-center items-center min-h-screen'>
-                <div className='bg-card-grey mx-auto w-2/5 lg:mx-60 lg:my-36 rounded-sm border-2 border-white flex flex-row justify-center mid-h-screen items-center'>
-                    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        
+            <div className='mx-4 lg:mx-20 justify-center justify-items-center text-center'>
+                <div className='bg-card-white-grey rounded mt-2 lg:mt-10 justify-self-center mb-8 p-6 items-center border-4 lg:px-40 sm: md:px-20 xl:px-60 2xl:px-96 '>
+                    <div className="flex min-h-full flex-1 flex-col text-center justify-items-center justify-center pb-12 lg:px-8">
                         <img
                             className="mx-auto h-auto w-auto"
                             src={iconlogo}
@@ -66,16 +66,18 @@ function ChangePassword() {
                             />
                         </div>
                         <div className='justify-center flex'>
-                                <button
-                                    type="submit"
-                                    className="flex w-1/2 mt-8 justify-center rounded-md bg-gold px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-goldhov focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                                >
-                                    Aceptar
-                                </button>
+                            <button
+                                type="submit"
+                                className="flex w-1/2 mt-8 justify-center rounded-md bg-gold px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-goldhov focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            >
+                                Aceptar
+                            </button>
                         </div>
                     </div>
                 </div>
+
             </div>
+
 
 
         </>
