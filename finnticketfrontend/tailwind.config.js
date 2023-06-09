@@ -38,7 +38,9 @@ module.exports = {
         'cream-pie': '#E4DCCF',
         'button-orange': '#D88837',
         'button-green': '#2EAB9E',
-        'base-yellow': '#D4AF37'
+        'base-yellow': '#D4AF37',
+        'newGreen': '#5CA27F',
+        'newGreen2': '#67AE8B'
       },
 
       flexBasis: {

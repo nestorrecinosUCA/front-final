@@ -24,7 +24,6 @@ function Navbar() {
                                 </ul>
                             </li>
 
-                            <li><a><Link to="">Usuarios</Link></a></li>
                             <li><a><Link to="">Moderadores</Link></a></li>
 
                             <li>
@@ -33,6 +32,7 @@ function Navbar() {
                                 </a>
                                 <ul class="p-2">
                                     <li class="bg-base-200"><Link to="/permits"><a>Permisos</a></Link></li>
+                                    <li class="bg-base-200"><Link to="/createEvent"><a>Agregar Evento</a></Link></li>
                                 </ul>
                             </li>
                         </ul>
@@ -56,7 +56,6 @@ function Navbar() {
                             </ul>
                         </li>
 
-                        <li><a><Link to="">Usuarios</Link></a></li>
                         <li><a><Link to="/moderator">Moderadores</Link></a></li>
 
                         <li>
@@ -65,6 +64,7 @@ function Navbar() {
                             </a>
                             <ul class="p-2">
                                 <li class="bg-base-200"><Link to="/permits"><a>Permisos</a></Link></li>
+                                <li class="bg-base-200"><Link to="/createEvent"><a>Agregar Evento</a></Link></li>
                             </ul>
                         </li>
                     </ul>
