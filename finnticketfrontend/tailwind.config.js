@@ -40,7 +40,8 @@ module.exports = {
         'button-green': '#2EAB9E',
         'base-yellow': '#D4AF37',
         'newGreen': '#5CA27F',
-        'newGreen2': '#67AE8B'
+        'newGreen2': '#67AE8B',
+        'btnReturn': '#78B7D8'
       },
 
       flexBasis: {
