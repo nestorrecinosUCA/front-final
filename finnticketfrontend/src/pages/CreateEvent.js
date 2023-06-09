@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom'
+import { SnackbarProvider, enqueueSnackbar } from 'notistack'
 import Swal from "sweetalert2";
 
 
@@ -7,21 +8,25 @@ import Swal from "sweetalert2";
 function CreateEvent() {
 
     const saveEvent = () => {
-        Swal.fire({
-            title: 'Evento guardado',
-            icon: 'success'
+        enqueueSnackbar("Evento guardado con exito!", {
+            variant: "success",
         })
     }
 
     const saveLocation = () => {
-        Swal.fire({
-            title: 'Localidad guardada',
-            icon: 'success'
+        enqueueSnackbar("localidad agregada!", {
+            variant: "info",
         })
     }
 
     return (
         <>
+            <SnackbarProvider autoHideDuration={1000}
+                anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                }} />
+
             <section class="max-w-4xl p-6 mx-auto bg-gray-500 rounded-md shadow-md dark:bg-gray-600 mt-4">
                 <h1 class="text-xl font-bold text-white capitalize dark:text-white">Crear Evento</h1>
 
@@ -134,7 +139,7 @@ function CreateEvent() {
                 </div>
 
                 <div>
-                    <div class="mx-4 border-b-2 lg:mx-20 lg:border-b-4 md:border-b-4 2xl:border-b-4 rounded mt-10"/>
+                    <div class="mx-4 border-b-2 lg:mx-20 lg:border-b-4 md:border-b-4 2xl:border-b-4 rounded mt-10" />
                     <div class="flex flex-col mt-4 bg-gray-800 dark:bg-gray-800 rounded-md">
                         <div class="-m-1.5 overflow-x-auto rounded-md">
                             <div class="p-1.5 min-w-full inline-block align-middle rounded-md">

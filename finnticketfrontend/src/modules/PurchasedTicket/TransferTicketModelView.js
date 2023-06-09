@@ -1,10 +1,26 @@
 import React from "react";
 import ROAR from '../../assets/img/ROAR.png'
+import { SnackbarProvider, enqueueSnackbar } from 'notistack'
 
 function TransferTicketModelView() {
   const [showModal, setShowModal] = React.useState(false);
+
+  const ticketTransfer = () => {
+    enqueueSnackbar("Ticket Transferido exitosamente!", {
+      variant: "success",
+    });
+    setShowModal(false)
+  }
+
   return (
     <>
+      <SnackbarProvider autoHideDuration={3000}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right'
+        }}
+        />
+
       <button
         className="bg-button-orange w-60 font-bold rounded-md p-2 px-10 ml-0 lg:ml-2  mt-2 lg:mt-0"
         type="button"
@@ -44,7 +60,9 @@ function TransferTicketModelView() {
                       <input type="email" id="email" class="h-12 pl-7 outline-none px-2  w-full bg-header-bg rounded-xl mt-2" placeholder="john.doe@company.com" required />
                     </div>
                     <div class="flex justify-center mt-4">
-                      <button class="mr-2 outline-none pay h-12 bg-gold text-white mb-3 hover:bg-goldhov rounded-lg w-56 cursor-pointer transition-all">Enviar</button>
+                      <button class="mr-2 outline-none pay h-12 bg-gold text-white mb-3 
+                      hover:bg-goldhov rounded-lg w-56 cursor-pointer transition-all"
+                        onClick={ticketTransfer}>Enviar</button>
                       <button onClick={() => setShowModal(false)} class="outline-none pay h-12 bg-red-500 text-white mb-3 hover:bg-red-600 rounded-lg w-56 cursor-pointer transition-all">Cancelar</button>
                     </div>
                   </div>
@@ -83,7 +101,10 @@ function TransferTicketModelView() {
                           <input type="email" id="email" class="h-12 pl-7 outline-none px-2  w-full bg-header-bg rounded-xl mt-2" placeholder="john.doe@company.com" required />
                         </div>
                         <div class="flex justify-center mt-4">
-                          <button class="mr-2 outline-none pay h-12 bg-gold text-white mb-3 hover:bg-goldhov rounded-lg w-56 cursor-pointer transition-all">Enviar</button>
+                          <button class="mr-2 outline-none pay h-12 bg-gold text-white mb-3 
+                          hover:bg-goldhov rounded-lg w-56 cursor-pointer transition-all"
+                            onClick={ticketTransfer}>Enviar</button>
+
                           <button onClick={() => setShowModal(false)} class="outline-none pay h-12 bg-red-500 text-white mb-3 hover:bg-red-600 rounded-lg w-56 cursor-pointer transition-all">Cancelar</button>
                         </div>
                       </div>
