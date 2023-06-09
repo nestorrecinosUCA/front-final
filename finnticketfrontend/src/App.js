@@ -16,6 +16,8 @@ import PurchasedTicket from './pages/PurchasedTicket';
 import HomeWNavbar from './pages/HomeWNavbar';
 import CreateEvent from './pages/CreateEvent';
 import Example from './pages/Example';
+import ChangePassword from './pages/ChangePassword';
+
 
 function App() {
   return (
@@ -36,6 +38,7 @@ function App() {
         <Route path='homeWNavbar' element={<HomeWNavbar/>}/>
         <Route path='createEvent' element={<CreateEvent />}/>
         <Route path='example' element={<Example />}/>
+        <Route path='changePassword' element={<ChangePassword />}/>
       </Routes>
     </>
   );

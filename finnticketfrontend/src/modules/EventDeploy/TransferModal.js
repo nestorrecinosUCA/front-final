@@ -7,7 +7,7 @@ function TransferModal() {
             <div class="lg:hidden">
                 <div class="flex justify-center items-center min-h-screen">
                     <div class="h-auto w-80 bg-card-grey border-2 border-gold p-3 rounded-lg">
-                        <p class="text-xl font-semibold">Detalles del pago</p>
+                        <p class="text-xl font-semibold">Transferencia</p>
                         <div class="input_text mt-6 relative">
                             <select className="select select-bordered w-full max-w-xs">
                                 <option disabled selected>Localidad</option>
@@ -39,7 +39,7 @@ function TransferModal() {
                     <div className='bg-card-grey mx-auto w-8/12 lg:mx-60 lg:my-36 rounded-sm border-4 border-gold flex flex-row justify-center mid-h-screen items-center'>
                         <div className='basis-5 w-full sm:w-auto'>
                             <div class="h-auto w-full p-3 rounded-lg">
-                                <p class="text-xl font-semibold">Detalles del pago</p>
+                                <p class="text-xl font-semibold">Transferencia</p>
                                 <div class="input_text mt-6 relative">
                                     <select className="select select-bordered w-full max-w-xs">
                                         <option disabled selected>Localidad</option>
