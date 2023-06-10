@@ -1,23 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom'
 import { SnackbarProvider, enqueueSnackbar } from 'notistack'
-import Swal from "sweetalert2";
 
 
 
-function CreateEvent() {
+function EditEvent() {
 
     const saveEvent = () => {
-        enqueueSnackbar("Evento guardado con exito!", {
+        enqueueSnackbar("Evento actualizado con exito!", {
             variant: "success",
         })
     }
 
     const saveLocation = () => {
-        enqueueSnackbar("localidad agregada!", {
+        enqueueSnackbar("localidad actualizada!", {
             variant: "info",
         })
     }
+
+    const [selectedDate, setSelectedDate] = useState('2023-11-12');
+
+    const handleDateChange = (event) => {
+        setSelectedDate(event.target.value);
+    };
 
     return (
         <>
@@ -31,22 +36,26 @@ function CreateEvent() {
                 <h1 class="text-xl font-bold text-white capitalize dark:text-white">Crear Evento</h1>
 
                 <div class="flex justify-end">
-                    <Link to="/homeWNavbar">
+                    <Link to="/allEvents">
                         <button class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-pink-500 rounded-md hover:bg-pink-800">Regresar</button>
                     </Link>
                 </div>
 
                 <form>
                     <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+                        <div class="hidden">
+                            <label class="text-white dark:text-gray-200">Id localidad</label>
+                            <input type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+
                         <div>
                             <label class="text-white dark:text-gray-200">Titulo</label>
-                            <input id="password" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <input value="Concierto Martin Garrix - 2023" id="password" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
                         </div>
 
                         <div>
                             <label class="text-white dark:text-gray-200">Categoria</label>
                             <select class="appearance-none block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
-                                <option disabled selected>Elige un opcion</option>
                                 <option>Cine</option>
                                 <option>Baile</option>
                                 <option>Musica</option>
@@ -56,7 +65,7 @@ function CreateEvent() {
 
                         <div>
                             <label class="text-white dark:text-gray-200">Hora</label>
-                            <input id="password" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <input type="text" value="8:30" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
                         </div>
 
                         <div>
@@ -89,9 +98,8 @@ function CreateEvent() {
                         </div>
 
                         <div>
-                            <label class="text-white dark:text-gray-200" >Involucrados</label>
+                            <label class="text-white dark:text-gray-200">Involucrados</label>
                             <select class="appearance-none block w-full px-4 py-2 mt-2.5 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
-                                <option disabled selected>Elige un opcion</option>
                                 <option>Douglas Albeño</option>
                                 <option>Cristian Hernández</option>
                                 <option>Josue Patita</option>
@@ -99,13 +107,12 @@ function CreateEvent() {
                             </select>
                         </div>
                         <div>
-                            <label class="text-white dark:text-gray-200">Date</label>
-                            <input id="date" type="date" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <label class="text-white dark:text-gray-200" >Date</label>
+                            <input type="date" value={selectedDate} onChange={handleDateChange} class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
                         </div>
                         <div>
-                            <label class="text-white dark:text-gray-200">Patrocinadores</label>
+                            <label class="text-white dark:text-gray-200" >Patrocinadores</label>
                             <select class="appearance-none block w-full px-4 py-2 mt-2.5 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
-                                <option disabled selected>Elige un opcion</option>
                                 <option>Pan la tecleña</option>
                                 <option>Teleton</option>
                                 <option>Applaudo Studios xd</option>
@@ -141,7 +148,7 @@ function CreateEvent() {
 
                 <div class="flex justify-end mt-6">
                     <button class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-newGreen rounded-md hover:bg-newGreen2"
-                        onClick={saveEvent}>Guardar</button>
+                        onClick={saveEvent}>Actualizar Evento</button>
                 </div>
             </section>
 
@@ -151,6 +158,12 @@ function CreateEvent() {
 
                 <form>
                     <div class="grid grid-cols-1 gap-2 mt-4 sm:grid-cols-2">
+
+                        <div class="hidden">
+                            <label class="text-white dark:text-gray-200">Id localidad</label>
+                            <input type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+
                         <div>
                             <label class="text-white dark:text-gray-200">Nombre de localidad</label>
                             <input type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
@@ -170,7 +183,7 @@ function CreateEvent() {
 
                 <div class="flex justify-end mt-4">
                     <button class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-newGreen rounded-md hover:bg-newGreen2"
-                        onClick={saveLocation}>Agregar</button>
+                        onClick={saveLocation}>Actualizar</button>
                 </div>
 
                 <div>
@@ -220,4 +233,4 @@ function CreateEvent() {
     )
 }
 
-export default CreateEvent
+export default EditEvent

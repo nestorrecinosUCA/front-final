@@ -15,8 +15,8 @@ import ModalTest from './pages/ModalTest';
 import PurchasedTicket from './pages/PurchasedTicket';
 import HomeWNavbar from './pages/HomeWNavbar';
 import CreateEvent from './pages/CreateEvent';
-import Example from './pages/Example';
 import ChangePassword from './pages/ChangePassword';
+import EditEvent from './pages/EditEvent';
 
 
 function App() {
@@ -37,8 +37,8 @@ function App() {
         <Route path='purchasedTicket' element={<PurchasedTicket/>}/>
         <Route path='homeWNavbar' element={<HomeWNavbar/>}/>
         <Route path='createEvent' element={<CreateEvent />}/>
-        <Route path='example' element={<Example />}/>
         <Route path='changePassword' element={<ChangePassword />}/>
+        <Route path='editEvent' element={<EditEvent />}/>
       </Routes>
     </>
   );
