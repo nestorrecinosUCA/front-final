@@ -16,6 +16,7 @@ import PurchasedTicket from './pages/PurchasedTicket';
 import HomeWNavbar from './pages/HomeWNavbar';
 import CreateEvent from './pages/CreateEvent';
 import ChangePassword from './pages/ChangePassword';
+import QrReader from './pages/QrReader';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path='homeWNavbar' element={<HomeWNavbar/>}/>
         <Route path='createEvent' element={<CreateEvent />}/>
         <Route path='changePassword' element={<ChangePassword />}/>
+        <Route path='qr' element={<QrReader />}/>
       </Routes>
     </>
   );
