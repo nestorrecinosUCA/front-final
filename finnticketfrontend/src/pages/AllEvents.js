@@ -3,7 +3,6 @@ import EventCard from '../modules/EventContainer/EventCard'
 import EventCardSO from '../modules/EventContainer/EventCardSO'
 import EventCardPanic from '../modules/EventContainer/EventCardPanic'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 
 function AllEvents() {
   return (
@@ -19,7 +18,7 @@ function AllEvents() {
             
           </div>
           <div class="flex-none">
-            <ul class="menu menu-horizontal px-1 ">
+            <ul class="menu menu-horizontal px-1 lg:mr-12">
               <li><a>Todos</a></li>
               <li><a>Sold Out</a></li>
               <li tabindex="0">
