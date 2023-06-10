@@ -17,6 +17,7 @@ import HomeWNavbar from './pages/HomeWNavbar';
 import CreateEvent from './pages/CreateEvent';
 import Example from './pages/Example';
 import ChangePassword from './pages/ChangePassword';
+import QrReader from './pages/QrReader';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path='createEvent' element={<CreateEvent />}/>
         <Route path='example' element={<Example />}/>
         <Route path='changePassword' element={<ChangePassword />}/>
+        <Route path='qr' element={<QrReader />}/>
       </Routes>
     </>
   );
