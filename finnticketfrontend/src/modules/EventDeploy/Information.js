@@ -4,7 +4,7 @@ function Information() {
     return (
         <>
 
-            <div className=' rounded px-10 border-4 border-white-box w-full items-center text-center py-5'>
+            <div className=' rounded px-10 border-2 border-white-box w-full items-center text-center py-5'>
                 <h2 class="card-title justify-center">Martin Garrix</h2>
                 <div className='flex-row h-full '>
                     <div className='w-full flex mb-2 sm:mb-0'>

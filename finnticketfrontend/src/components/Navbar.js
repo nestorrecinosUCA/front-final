@@ -70,10 +70,13 @@ function Navbar() {
                     </ul>
                     <Outlet />
                 </div>
+
                 <div class="navbar-end ">
+                    <Link to="/changePassword">
                     <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
                         <img class="w-6 h-6 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Imagen de persona logueada" />
                     </div>
+                    </Link>
                 </div>
             </div>
         </>
