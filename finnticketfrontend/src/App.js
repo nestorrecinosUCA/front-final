@@ -18,6 +18,7 @@ import CreateEvent from './pages/CreateEvent';
 import ChangePassword from './pages/ChangePassword';
 import EditEvent from './pages/EditEvent';
 import QrReader from './pages/QrReader';
+import Signup from './modules/SingInComponent/SignUp';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path='changePassword' element={<ChangePassword />}/>
         <Route path='editEvent' element={<EditEvent />}/>
         <Route path='qr' element={<QrReader />}/>
+        <Route path='signup' element={<Signup />} />
       </Routes>
     </>
   );
