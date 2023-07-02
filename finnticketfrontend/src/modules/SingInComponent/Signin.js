@@ -1,6 +1,5 @@
 import React from 'react'
 import iconlogo from '../../assets/img/iconlogo.png'
-import google from '../../assets/img/google-logo-9827.png'
 import { Outlet, Link } from 'react-router-dom'
 import { gapi } from 'gapi-script'
 import GoogleLogin from 'react-google-login'
@@ -110,6 +109,11 @@ function Signin() {
                 className='w-full justify-center' />
             </div>
           </form>
+
+          <div className="text-center mt-4">
+            <p>No tienes una cuenta? <Link to="/signup"><button className="bg-red-500 hover:bg-red-600 text-white font-bold px-2 rounded-full">CREA UNA CUENTA</button></Link></p>
+          </div>
+
         </div>
       </div>
       <Outlet />
