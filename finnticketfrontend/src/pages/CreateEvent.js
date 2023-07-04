@@ -50,12 +50,14 @@ function CreateEvent() {
             .then(data => {
                 console.log(data);
                 // Realizar las acciones adicionales necesarias después de un registro exitoso
-                
+                enqueueSnackbar("Evento guardado con exito!", {
+                    variant: "success",
+                })
             })
             .catch(error => {
                 console.log(error);
                 // Manejar el error en caso de que ocurra
-                enqueueSnackbar("Va explotar!", {
+                enqueueSnackbar("Error, no se ha podido agregar el evento!", {
                     variant: "failure",
                 })
             });
@@ -244,7 +246,7 @@ function CreateEvent() {
 
                 <div class="flex justify-end mt-6">
                 <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                    <button onClick={handleSubmit} class="btn bg-black text-white btn-lg">Register</button>
+                                                    <button onClick={handleSubmit} class="btn px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-newGreen rounded-md hover:bg-newGreen2">guardar</button>
                                                 </div>
                 </div>
             </section>
