@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Outlet, Link, useNavigate } from 'react-router-dom';
 import iconlogo from '../../assets/img/iconlogo.png'
-
+import { apiUrl } from '../../Constants/constans';
 
 function Login() {
   const [credentials, setCredentials] = useState({});
@@ -28,7 +28,7 @@ function Login() {
   };
 
   const handleLogin = () => {
-    fetch('http://localhost:8080/auth/login', {
+    fetch( `${apiUrl}/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

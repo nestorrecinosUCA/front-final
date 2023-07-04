@@ -3,7 +3,7 @@ import { Outlet, Link } from 'react-router-dom'
 import { SnackbarProvider, enqueueSnackbar } from 'notistack'
 import Swal from "sweetalert2";
 import axios from 'axios';
-
+import { apiUrl } from '../Constants/constans';
 
 
 function CreateEvent() {
@@ -33,7 +33,7 @@ function CreateEvent() {
             assistantsCapacity: assistantsCapacity
         };
 
-        fetch('http://localhost:8080/events', {
+        fetch(`${apiUrl}/events`, {
             method: 'POST',
             headers: {
                 authorization: `Bearer ${token}`,
@@ -98,7 +98,7 @@ function CreateEvent() {
 
     const fetchCategories = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/categories', {
+            const response = await axios.get(`${apiUrl}/categories`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
