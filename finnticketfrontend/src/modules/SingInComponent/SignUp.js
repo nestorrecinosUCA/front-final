@@ -40,7 +40,7 @@ function Signup() {
             return;
         }
 
-        fetch('http://localhost:8080/auth/signup', {
+        fetch(`${apiUrl}/auth/signup`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
