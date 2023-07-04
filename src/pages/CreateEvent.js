@@ -64,7 +64,6 @@ function CreateEvent() {
     };
 
 
-
     const saveEvent = () => {
         enqueueSnackbar("Evento guardado con exito!", {
             variant: "success",
@@ -113,7 +112,7 @@ function CreateEvent() {
         console.log(selectedCategoryId);
         setCategoryId(selectedCategoryId);
       };
-
+  
     return (
         <>
             <SnackbarProvider autoHideDuration={1000}
@@ -206,7 +205,7 @@ function CreateEvent() {
                                 <option>Nestor Applaudo</option>
                             </select>
                         </div>
-                       
+
                         <div>
                             <label class="text-white dark:text-gray-200">Patrocinadores</label>
                             <select class="appearance-none block w-full px-4 py-2 mt-2.5 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">

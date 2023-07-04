@@ -18,7 +18,6 @@ function Carousel() {
            
             url: ' https://laesquina506.com/wp-content/uploads/2023/02/tienda-online-costa-rica.png'
         }
-        
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -68,4 +67,3 @@ function Carousel() {
 }
 
 export default Carousel;
-
