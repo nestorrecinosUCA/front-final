@@ -1,11 +1,68 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom'
 import { SnackbarProvider, enqueueSnackbar } from 'notistack'
 import Swal from "sweetalert2";
-
+import axios from 'axios';
+import { apiUrl } from '../Constants/constans';
 
 
 function CreateEvent() {
+    //saving token
+    const token = localStorage.getItem('token');
+    //variables
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [date, setDate] = useState('');
+    const [hour, setHour] = useState('');
+    const [duration, setDuration] = useState('');
+    const [image, setImage] = useState('');
+    const [categoryId, setCategoryId] = useState('');
+    const [assistantsCapacity, setAssistantsCapacity] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const data = {
+            title: title,
+            description: description,
+            date: date,
+            hour: hour,
+            duration: duration,
+            image: image,
+            categoryId: categoryId,
+            assistantsCapacity: assistantsCapacity
+        };
+
+        fetch(`${apiUrl}/events`, {
+            method: 'POST',
+            headers: {
+                authorization: `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Error en la respuesta de la petición.');
+            })
+            .then(data => {
+                console.log(data);
+                // Realizar las acciones adicionales necesarias después de un registro exitoso
+                enqueueSnackbar("Evento guardado con exito!", {
+                    variant: "success",
+                })
+            })
+            .catch(error => {
+                console.log(error);
+                // Manejar el error en caso de que ocurra
+                enqueueSnackbar("Error, no se ha podido agregar el evento!", {
+                    variant: "failure",
+                })
+            });
+    };
+
 
     const saveEvent = () => {
         enqueueSnackbar("Evento guardado con exito!", {
@@ -19,6 +76,43 @@ function CreateEvent() {
         })
     }
 
+    //date
+    const [dateValue, setDateValue] = useState('');
+
+    const handleDateChange = (e) => {
+        const value = e.target.value;
+        setDateValue(value);
+
+        setDate(value);
+        console.log(date);
+        console.log(value);
+
+    };
+    //category
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        fetchCategories();
+    }, []);
+
+    const fetchCategories = async () => {
+        try {
+            const response = await axios.get(`${apiUrl}/categories`, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+            setCategories(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    const handleCategoriaChange = (event) => {
+        const selectedCategoryId = event.target.value;
+        console.log(selectedCategoryId);
+        setCategoryId(selectedCategoryId);
+      };
+  
     return (
         <>
             <SnackbarProvider autoHideDuration={1000}
@@ -36,57 +130,70 @@ function CreateEvent() {
                     </Link>
                 </div>
 
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+                        {/*Title*/}
                         <div>
                             <label class="text-white dark:text-gray-200">Titulo</label>
-                            <input id="password" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <input id="title" value={title} onChange={(e) => setTitle(e.target.value)} required type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
                         </div>
 
+                        {/*Description*/}
+                        <div>
+                            <label class="text-white dark:text-gray-200">Descripcion</label>
+                            <input id="description" value={description} onChange={(e) => setDescription(e.target.value)} required type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+                        {/*Image*/}
+                        <div>
+                            <label class="text-white dark:text-gray-200">Url de imagen</label>
+                            <input id="image" value={image} onChange={(e) => setImage(e.target.value)} required type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+                        {/*Date*/}
+                        <div>
+                            <label className="text-white dark:text-gray-200">Fecha</label>
+                            <input
+                                id="date"
+                                type="date"
+                                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                                value={dateValue}
+                                onChange={handleDateChange}
+                            />
+                        </div>
+                        {/*Hour*/}
+                        <div>
+                            <label class="text-white dark:text-gray-200">hora</label>
+                            <input id="hour" value={hour} onChange={(e) => setHour(e.target.value)} required type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+                        {/*Duration*/}
+                        <div>
+                            <label class="text-white dark:text-gray-200">Duracion</label>
+                            <input id="duration" value={duration} onChange={(e) => setDuration(e.target.value)} required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+                        {/*AssistantsCapacity*/}
+                        <div>
+                            <label class="text-white dark:text-gray-200">Capacidad de evento</label>
+                            <input id="assistantsCapacity" value={assistantsCapacity} onChange={(e) => setAssistantsCapacity(e.target.value)} required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+
+                        {/*Category*/}
                         <div>
                             <label class="text-white dark:text-gray-200">Categoria</label>
-                            <select class="appearance-none block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
-                                <option disabled selected>Elige un opcion</option>
-                                <option>Cine</option>
-                                <option>Baile</option>
-                                <option>Musica</option>
-                                <option>Deportes</option>
+                            <select
+                                class="appearance-none block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                                name="categoryId"
+
+                                onChange={handleCategoriaChange}
+                            >
+                                <option value="">Elige una opcion </option>
+                                {categories.map((category) => (
+                                    <option key={category.id} value={category.id}>
+                                        {category.name}
+                                    </option>
+                                ))}
                             </select>
                         </div>
 
-                        <div>
-                            <label class="text-white dark:text-gray-200">Hora</label>
-                            <input id="password" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
-                        </div>
 
-                        <div>
-                            <label class="text-white dark:text-gray-200">Duracion</label>
-                            <div class="block w-full px-4 py-1.5 mt-2 bg-white dark:bg-gray-700 rounded-md text-gray-700 dark:text-gray-300">
-                                <select name="hours" class="bg-white dark:bg-gray-700 text-xl appearance-none outline-none">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5" selected>5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">10</option>
-                                    <option value="12">12</option>
-                                </select>
-                                <span class="text-xl mr-3">:</span>
-                                <select name="minutes" class="bg-white dark:bg-gray-700 text-xl appearance-none outline-none mr-4">
-                                    <option value="0">00</option>
-                                    <option value="30">30</option>
-                                </select>
-                                <select name="ampm" class="bg-white dark:bg-gray-700 text-xl appearance-none outline-none">
-                                    <option value="am" selected>AM</option>
-                                    <option value="pm">PM</option>
-                                </select>
-                            </div>
-                        </div>
 
                         <div>
                             <label class="text-white dark:text-gray-200" >Involucrados</label>
@@ -98,10 +205,7 @@ function CreateEvent() {
                                 <option>Nestor Applaudo</option>
                             </select>
                         </div>
-                        <div>
-                            <label class="text-white dark:text-gray-200">Date</label>
-                            <input id="date" type="date" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
-                        </div>
+
                         <div>
                             <label class="text-white dark:text-gray-200">Patrocinadores</label>
                             <select class="appearance-none block w-full px-4 py-2 mt-2.5 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
@@ -140,8 +244,9 @@ function CreateEvent() {
                 </form>
 
                 <div class="flex justify-end mt-6">
-                    <button class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-newGreen rounded-md hover:bg-newGreen2"
-                        onClick={saveEvent}>Guardar</button>
+                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                                    <button onClick={handleSubmit} class="btn px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-newGreen rounded-md hover:bg-newGreen2">guardar</button>
+                                                </div>
                 </div>
             </section>
 

@@ -1,86 +1,162 @@
-import React from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import React from 'react';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import iconlogo from '../assets/img/logo.png';
 
 function Navbar() {
+    const handleDropdown = () => {
+        const dropdownContent = document.getElementById('dropdown-content');
+        dropdownContent.classList.toggle('hidden');
+    };
+
+    const navigate = useNavigate();
+
+    const handleOut = () => {
+        localStorage.removeItem('token');
+        toast.error('Sesión terminada', {
+            autoClose: 500,
+            closeButton: false,
+        });
+        navigate('/');
+    };
+
     return (
         <>
-            <div class="sticky top-0 z-10 navbar bg-base-100">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
-                        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52 font-sans font-bold">
-                            <li ><Link to="/homeWNavbar"><a>Inicio</a></Link></li>
+            <div className="sticky top-0 z-10 navbar bg-base-100">
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <button
+                            tabIndex="0"
+                            className="btn btn-ghost lg:hidden"
+                            onClick={handleDropdown}
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 6h16M4 12h8m-8 6h16"
+                                />
+                            </svg>
+                        </button>
+                        <ul
+                            id="dropdown-content"
+                            tabIndex="0"
+                            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52 font-sans font-bold hidden"
+                        >
                             <li>
-                                <a>Eventos
-                                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-                                </a>
-                                <ul class="p-2">
-                                    <li class="bg-base-200"><Link to="/allEvents"><a>Eventos</a></Link></li>
-                                    <li class="bg-base-200"><Link to="/purchasedTicket"><a>Tickets Comprados</a></Link></li>
-                                    <li class="bg-base-200"><Link to="/personalHistory"><a>Historial Eventos</a></Link></li>
-                                </ul>
+                                <Link to="/option1">
+                                    <a>Opción 1</a>
+                                </Link>
                             </li>
-
-                            <li><a><Link to="">Moderadores</Link></a></li>
-
                             <li>
-                                <a>Administracion
-                                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-                                </a>
-                                <ul class="p-2">
-                                    <li class="bg-base-200"><Link to="/permits"><a>Permisos</a></Link></li>
-                                    <li class="bg-base-200"><Link to="/createEvent"><a>Agregar Evento</a></Link></li>
-                                </ul>
+                                <Link to="/option2">
+                                    <a>Opción 2</a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
-                    <img class="w-52 h-auto " src={iconlogo}></img>
+                    <img className="w-52 h-auto" src={iconlogo} alt="Logo" />
                 </div>
 
-
-                {/*MENU FULL SCREEN*/}
-                <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1 font-sans font-bold">
-                        <li ><Link to="/homeWNavbar"><a>Inicio</a></Link></li>
+                {/* MENU FULL SCREEN */}
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1 font-sans font-bold">
                         <li>
-                            <a>Eventos
-                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                            <Link to="/homeWNavbar">
+                                <a>Inicio</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <a>
+                                Eventos
+                                <svg
+                                    className="fill-current"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                                </svg>
                             </a>
-                            <ul class="p-2">
-                                <li class="bg-base-200"><Link to="/allEvents"><a>Eventos</a></Link></li>
-                                <li class="bg-base-200"><Link to="/purchasedTicket"><a>Tickets Comprados</a></Link></li>
-                                <li class="bg-base-200"><Link to="/personalHistory"><a>Historial Eventos</a></Link></li>
+                            <ul className="p-2">
+                                <li className="bg-base-200">
+                                    <Link to="/allEvents">
+                                        <a>Eventos</a>
+                                    </Link>
+                                </li>
+                                <li className="bg-base-200">
+                                    <Link to="/purchasedTicket">
+                                        <a>Tickets Comprados</a>
+                                    </Link>
+                                </li>
+                                <li className="bg-base-200">
+                                    <Link to="/personalHistory">
+                                        <a>Historial Eventos</a>
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
 
-                        <li><a><Link to="/moderator">Moderadores</Link></a></li>
+                        <li>
+                            <a>
+                                Moderadores
+                            </a>
+                        </li>
 
                         <li>
-                            <a>Administracion
-                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                            <a>
+                                Administracion
+                                <svg
+                                    className="fill-current"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                                </svg>
                             </a>
-                            <ul class="p-2">
-                                <li class="bg-base-200"><Link to="/permits"><a>Permisos</a></Link></li>
-                                <li class="bg-base-200"><Link to="/createEvent"><a>Agregar Evento</a></Link></li>
+                            <ul className="p-2">
+                                <li className="bg-base-200">
+                                    <Link to="/permits">
+                                        <a>Permisos</a>
+                                    </Link>
+                                </li>
+                                <li className="bg-base-200">
+                                    <Link to="/createEvent">
+                                        <a>Agregar Evento</a>
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                     <Outlet />
                 </div>
 
-                <div class="navbar-end ">
-                    <Link to="/changePassword">
-                    <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                        <img class="w-6 h-6 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Imagen de persona logueada" />
-                    </div>
-                    </Link>
+                <div className="navbar-end">
+                    
+                        <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center" onClick={handleOut}>
+                            <img
+                                className="w-6 h-6 rounded-full"
+                                src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+                                alt="Imagen de persona logueada"
+                            />
+                        </div>
                 </div>
+                <Outlet />
             </div>
+            
         </>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
