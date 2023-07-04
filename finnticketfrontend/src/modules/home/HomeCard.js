@@ -9,34 +9,34 @@ function HomeCard() {
 
                     <div class="card shadow-lg rounded-lg overflow-hidden bg-base-100 hover:bg-base-200 transition duration-300 ease-in-out">
                         <Link to="/signin">
-                        <img class="w-72 h-48 object-cover transform hover:scale-95 hover:opacity-75 transition duration-500 ease-in-out rounded-t-lg" src="https://www.fayerwayer.com/resizer/njbORCHBGgwIlAgfIaKwvC1zZ1g=/arc-photo-metroworldnews/arc2-prod/public/HYMYK7RLHVFKBF6TFELTTM5QPY.webp" alt="spiterman" />
+                        <img class="w-72 h-48 object-cover transform hover:scale-95 hover:opacity-75 transition duration-500 ease-in-out rounded-t-lg" src="https://imagenes.muyinteresante.es/files/composte_image/uploads/2023/06/09/64833f2caa301.jpeg" alt="spiterman" />
                         <div class="p-4">
-                            <h2 class="text-sm mb-2">EVENTO PELICULA - 12/06/2023</h2>
+                            <h2 class="text-sm mb-2">EVENTO</h2>
                         </div>
                         </Link>
                     </div>
 
 
                     <div class="card shadow-lg rounded-lg overflow-hidden bg-base-100 hover:bg-base-200 transition duration-300 ease-in-out">
-                        <img class="w-72 h-48 object-cover transform hover:scale-95 hover:opacity-75 transition duration-500 ease-in-out rounded-t-lg" src="https://nerdhits.com.br/wp-content/uploads/2022/05/gyomei-demon-slayer.jpg" alt="spiterman" />
+                        <img class="w-72 h-48 object-cover transform hover:scale-95 hover:opacity-75 transition duration-500 ease-in-out rounded-t-lg" src="https://eventoempresa.com/wp-content/uploads/2016/01/cateringcacerespajuelo2.jpg" alt="spiterman" />
                         <div class="p-4">
-                            <h2 class="text-sm mb-2">EVENTO PELICULA - 12/06/2023</h2>
+                            <h2 class="text-sm mb-2">EVENTO</h2>
                         </div>
                     </div>
 
 
                     <div class="card shadow-lg rounded-lg overflow-hidden bg-base-100 hover:bg-base-200 transition duration-300 ease-in-out">
-                        <img class="w-72 h-48 object-cover transform hover:scale-95 hover:opacity-75 transition duration-500 ease-in-out rounded-t-lg" src="https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2023/02/giyu-tomioka.jpg" alt="spiterman" />
+                        <img class="w-72 h-48 object-cover transform hover:scale-95 hover:opacity-75 transition duration-500 ease-in-out rounded-t-lg" src="https://thumbs.dreamstime.com/b/carteles-de-cine-y-producci%C3%B3n-pel%C3%ADculas-proyecci%C3%B3n-estudio-v%C3%ADdeo-vintage-banners-con-c%C3%A1mara-en-el-carrete-pel%C3%ADcula-tr%C3%ADpode-234121603.jpg" alt="spiterman" />
                         <div class="p-4">
-                            <h2 class="text-sm mb-2">EVENTO PELICULA - 12/06/2023</h2>
+                            <h2 class="text-sm mb-2">EVENTO</h2>
                         </div>
                     </div>
 
 
                     <div class="card shadow-lg rounded-lg overflow-hidden bg-base-100 hover:bg-base-200 transition duration-300 ease-in-out">
-                        <img class="w-72 h-48 object-cover transform hover:scale-95 hover:opacity-75 transition duration-500 ease-in-out rounded-t-lg" src="https://wisecineman.ru/kartinki/heroes/kimetsu-no-yaiba/1007-1.webp" alt="spiterman" />
+                        <img class="w-72 h-48 object-cover transform hover:scale-95 hover:opacity-75 transition duration-500 ease-in-out rounded-t-lg" src="https://puregaming.es/wp-content/uploads/2017/08/Destacada-los-eventos-molan.jpg" alt="spiterman" />
                         <div class="p-4">
-                            <h2 class="text-sm mb-2">EVENTO PELICULA - 12/06/2023</h2>
+                            <h2 class="text-sm mb-2">EVENTO</h2>
                         </div>
                     </div>
 

@@ -5,17 +5,20 @@ function Carousel() {
 
     const slides = [
         {
-            url: 'https://i.pinimg.com/originals/24/b3/2e/24b32e53341202e5f52bf1609468fd05.jpg',
+            url: 'https://www.eclipseeventos.com/wp-content/uploads/2018/10/INICIO2.jpg',
+            
         },
         {
-            url: 'https://i.pinimg.com/originals/05/0f/0a/050f0a3bd19ce811522f0c63256637e9.jpg',
+            url: 'https://static.k-tuin.com/media/blog/escanear-codigos-qr-iphone.jpg',
         },
         {
-            url: 'https://t4.ftcdn.net/jpg/04/46/93/93/360_F_446939375_83iP0UYTg5F9vHl6icZwgrEBHXeXMVaU.jpg',
+            url: 'https://www.shutterstock.com/image-vector/money-transfers-online-shopping-digital-260nw-1698739627.jpg',
         },
         {
-            url: 'https://img.freepik.com/vector-premium/paisaje-urbano-verano-larga-noche-horizontal-panorama-ciudad-ilustracion-plana_318844-225.jpg?w=2000'
+           
+            url: ' https://laesquina506.com/wp-content/uploads/2023/02/tienda-online-costa-rica.png'
         }
+        
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
