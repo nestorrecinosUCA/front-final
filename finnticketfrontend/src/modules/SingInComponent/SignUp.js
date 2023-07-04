@@ -3,7 +3,7 @@ import iconlogo from '../../assets/img/iconlogo.png';
 import { useNavigate, Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { apiUrl } from '../../Constants/constans';
 function Signup() {
     const navigate = useNavigate();
     const [name, setName] = useState('');
