@@ -1,33 +1,8 @@
 import React from 'react'
 import iconlogo from '../../assets/img/iconlogo.png'
 import { Outlet, Link } from 'react-router-dom'
-import { gapi } from 'gapi-script'
-import GoogleLogin from 'react-google-login'
-import { useEffect } from 'react'
 
 function Signin() {
-
-  const clientID = "199267379325-pvol6fa9781qc2vos0iscna8l1kai1bn.apps.googleusercontent.com";
-
-  useEffect(() => {
-    const start = () => {
-      gapi.auth2.init({
-        clientId: clientID,
-      })
-
-    }
-    gapi.load("client:auth2", start)
-  }, [])
-
-  const onSucces = (res) => {
-    console.log("Login exitoso")
-    console.log(res)
-  }
-
-  const onFailure = (res) => {
-    console.log("Login fallido")
-    console.log(res)
-  }
 
   return (
     <>
@@ -91,27 +66,9 @@ function Signin() {
                 </button>
               </Link>
             </div>
-            <div>
-              {/*<button
-                type="submit"
-                className="flex w-full justify-center rounded-md bg-gold px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-goldhov focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                <img
-                  className="mx-3 h-5 w-5"
-                  src={google}
-                  alt="Google Logo"
-                />
-                <a>Inicia Sesion con google</a>
-                </button>*/}
-              <GoogleLogin clientId={clientID}
-                onSuccess={onSucces}
-                onFailure={onFailure}
-                cookiePolicy={"single_host_policy"}
-                className='w-full justify-center' />
-            </div>
           </form>
-
           <div className="text-center mt-4">
-            <p>No tienes una cuenta? <Link to="/signup"><button className="bg-red-500 hover:bg-red-600 text-white font-bold px-2 rounded-full">CREA UNA CUENTA</button></Link></p>
+            <p>No tienes una cuenta? <Link to="/signup"><button className="bg-red-500 hover:bg-red-600 text-white font-bold px-2 py-1 rounded-full">CREA UNA CUENTA</button></Link></p>
           </div>
 
         </div>
