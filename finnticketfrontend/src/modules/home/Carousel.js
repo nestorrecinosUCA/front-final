@@ -9,10 +9,10 @@ function Carousel() {
             
         },
         {
-            url: 'https://static.k-tuin.com/media/blog/escanear-codigos-qr-iphone.jpg',
+            url: 'https://img.freepik.com/psd-gratis/plantilla-banner-concierto-musica_23-2148986201.jpg',
         },
         {
-            url: 'https://www.shutterstock.com/image-vector/money-transfers-online-shopping-digital-260nw-1698739627.jpg',
+            url: 'https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-cheering-crowd-background-banner-image_186456.jpg',
         },
         {
            

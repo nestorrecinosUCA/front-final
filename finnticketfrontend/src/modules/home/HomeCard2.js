@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { apiUrl } from '../../Constants/constans';
 
 function EventCard({ eventData }) {
     const formatDate = (dateString) => {
@@ -42,7 +42,7 @@ function HomeCard2() {
                 const token = localStorage.getItem('token');
 
                 // Hacer la petición a la API con el token en el encabezado de autorización
-                const response = await axios.get('http://localhost:8080/events', {
+                const response = await axios.get(`${apiUrl}/events`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
